@@ -1,6 +1,5 @@
 package com.example.cdcconsumerdemo.message;
 
-import java.util.Map;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -34,9 +33,7 @@ public class PersonRepositoryImplTest {
             .repoRoot("git://https://github.com/sanderdg/spring-cloud-contract-producer.git")
             .downloadStub("com.example", "cdc-producer-demo")
             .stubsMode(StubRunnerProperties.StubsMode.REMOTE)
-            .minPort(8100).maxPort(8100)
-            .withProperties(Map.of("git.branch", "main"))
-            ;
+            .minPort(8100).maxPort(8100);
 
     @Test
     public void get_person_from_service_contract() {
