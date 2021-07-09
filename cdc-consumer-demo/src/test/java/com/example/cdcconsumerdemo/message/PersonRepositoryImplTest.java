@@ -22,9 +22,9 @@ import java.util.Map;
 //@AutoConfigureStubRunner(ids = {"com.example:cdc-producer-demo:+:stubs:8100"}, stubsMode = StubRunnerProperties.StubsMode.LOCAL)
 
 // Example: Use annotation for Remote
-//   - When connect to github by ssh, then set repositoryRoot=git://git@github.com:ShigeoTejima/spring-cloud-contract-demo.git
+//   - When connect to github by ssh, then set repositoryRoot=git://git@github.com:sanderdg/spring-cloud-contract-demo.git
 @AutoConfigureStubRunner(
-    repositoryRoot = "git://https://github.com/ShigeoTejima/spring-cloud-contract-demo.git",
+    repositoryRoot = "git://https://github.com/sanderdg/spring-cloud-contract-demo.git",
     ids = {"com.example:cdc-producer-demo:+::8100"},
     stubsMode = StubRunnerProperties.StubsMode.REMOTE,
     properties = {"git.branch=main"})
@@ -33,7 +33,7 @@ public class PersonRepositoryImplTest {
     // Example: Use RegisterExtension. programming
     //@RegisterExtension
     public static StubRunnerExtension stubRunnerExtension = new StubRunnerExtension()
-            .repoRoot("git://https://github.com/ShigeoTejima/spring-cloud-contract-demo.git")
+            .repoRoot("git://https://github.com/sanderdg/spring-cloud-contract-demo.git")
             .downloadStub("com.example", "cdc-producer-demo")
             .stubsMode(StubRunnerProperties.StubsMode.REMOTE)
             .minPort(8100).maxPort(8100)
